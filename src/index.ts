@@ -7,8 +7,7 @@ import { Ajax } from '@syncfusion/ej2-base';
 import '../styles/styles.scss';
 import '../styles/index.scss';
 let pages: Object[] = [
-    { root: 'home', page: 'homePage' },
-    { root: 'about', page: 'aboutPage' },
+    { root: 'home', page: 'homePage' }
 ];
 
 export interface IPages extends Window {
@@ -18,7 +17,6 @@ export interface IPages extends Window {
     sprintData1: ({ Id: number; Subject: string; Status: string; StartTime: string; EndTime: string; resources: { resourceId: number; resourceName: string; }[]; Priority: string; Tags: string; Progress: number; Predecessor?: undefined; } | { Id: number; Subject: string; Status: string; StartTime: string; EndTime: string; resources: { resourceId: number; resourceName: string; }[]; Priority: string; Tags: string; Progress: number; Predecessor: number; })[];
     // All route pages declared here.
     home: () => void;
-    about: () => void;
 }
 
 declare let window: IPages;
@@ -38,8 +36,6 @@ crossroads.addRoute('/{val}', () => {
         document.body.innerHTML = value.toString();
         if (window.location.hash.replace('#/', '') === 'home') {
             window.home();
-        } else {
-            window.about();
         }
     })
     .catch((error: any) => {
@@ -71,7 +67,6 @@ hasher.init(); // Initiate the hasher function
 export interface IPages extends Window {
     default: () => void;
     destroy: () => void;
-    about: () => void;
     getDataState: () => DataSketch;
 }
 export interface DataSketch {

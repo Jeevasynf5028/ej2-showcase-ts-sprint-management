@@ -43,10 +43,6 @@ module.exports = {
       filename: "homePage.html",
       template: "./src/home/homePage.html",
     }),
-    new HtmlWebpackPlugin({
-      filename: "aboutPage.html",
-      template: "./src/about/aboutPage.html",
-    }),
     new MiniCssExtractPlugin({
       filename: "[name].css",
     }),
