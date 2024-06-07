@@ -1,2 +1,2 @@
-# ej2-showcase-ts-sprintmanagement
-This repository contains a sample demonstrating of Sprint Management in typescript platform.
+# ej2-ts-sprint-management
+The repository for Sprint Management showcase sample

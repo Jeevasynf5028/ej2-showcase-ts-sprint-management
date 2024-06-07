@@ -1,0 +1,158 @@
+<div class="create-container" style="overflow: auto;">
+    <div class="nav-bar">
+        <div>
+            <div class="first-nav-div"></div>
+        </div>
+        <div class="centered-div">
+            <div class="parent-kanban" title="Kanban">
+                <div class="navimage-kanban"></div>
+            </div>
+            <div class="parent-scheduler" title="Scheduler">
+                <div class="navimage-scheduler"></div>
+            </div>
+            <div class="parent-gantt" title="Gantt Chart">
+                <div class="navimage-gantt"></div>
+            </div>
+            <div class="parent-grid" title="Grid">
+                <div class="navimage-grid"></div>
+            </div>
+        </div>
+        <div>
+            <div class="last-nav-div"></div>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="title-container">
+            <div class="extra-circle"></div>
+            <div class="title">Sprint Management</div>
+            <button class="button">+ New Task</button>
+            <div class="circle"></div>
+        </div>
+        <div class="datasource-filter-container">
+            <div class="card-container">
+                <div class="inner-cadr">
+                    <div class="mainimagetodo">
+                    </div>
+                    <div class="detailcontainertodo">
+                        <div class="texttodo">TO DO</div>
+                        <div class="counttodo">0</div>
+                    </div>
+                </div>
+                <div class="inner-cadr">
+                    <div class="mainimageprogress">
+                    </div>
+                    <div class="detailcontainertodo">
+                        <div class="texttodo change-font">In Progress</div>
+                        <div class="counttodo">0</div>
+                    </div>
+                </div>
+                <div class="inner-cadr">
+                    <div class="mainimagetest">
+                    </div>
+                    <div class="detailcontainertodo">
+                        <div class="texttodo">Testing</div>
+                        <div class="counttodo">0</div>
+                    </div>
+                </div>
+                <div class="inner-cadr">
+                    <div class="mainimagedone">
+                    </div>
+                    <div class="detailcontainertodo">
+                        <div class="texttodo">Done</div>
+                        <div class="counttodo">0</div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown-container">
+                <div id="datasourceDropDown" class="custom-dropdown">
+                </div>
+                <div id="image-container" class="custom-dropdown">
+                    <img src="https://ej2.syncfusion.com/demos/src/gantt/images/Martin%20Tamer.png" alt="Martin Tamer"
+                        class="circular-image" title="Martin Tamer" style="width: 35px; height: 35px;">
+                    <img src="https://ej2.syncfusion.com/demos/src/gantt/images/Rose%20Fuller.png" alt="Rose Fuller"
+                        class="circular-image" title="Rose Fuller" style="width: 35px; height: 35px;">
+                    <img src="https://ej2.syncfusion.com/demos/src/gantt/images/Margaret%20Buchanan.png"
+                        alt="Margaret Buchanan" class="circular-image" title="Margaret Buchanan"
+                        style="width: 35px; height: 35px;">
+                    <img src="https://ej2.syncfusion.com/demos/src/gantt/images/Fuller%20King.png" alt="Fuller King"
+                        class="circular-image" title="Fuller King" style="width: 35px; height: 35px;">
+                    <img src="https://ej2.syncfusion.com/demos/src/gantt/images/Davolio%20Fuller.png"
+                        alt="Davolio Fuller" class="circular-image" title="Davolio Fuller"
+                        style="width: 35px; height: 35px;">
+                </div>
+                <div id="timerangecompo" class="custom-dropdown">
+                    <input type="text" id="timerangecompo1">
+                </div>
+            </div>
+        </div>
+        <div class="component-contain add-overflow" style="border: 1px solid #cfd8dc;">
+            <div id="component-renderf" class="component-container1">
+
+            </div>
+            <div id="component-render-scheduler" class="component-container1">
+
+            </div>
+            <div id="component-render-gantt" class="component-container1">
+            </div>
+            <div id="component-render-grid" class="component-container1">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Mobile View Navigation Bar -->
+<div class="mobile-nav-bar">
+    <div class="parent-kanban">
+        <div class="navimage-kanban"></div>
+    </div>
+    <div class="parent-scheduler">
+        <div class="navimage-scheduler"></div>
+    </div>
+    <div class="parent-gantt">
+        <div class="navimage-gantt"></div>
+    </div>
+    <div class="parent-grid">
+        <div class="navimage-grid"></div>
+    </div>
+</div>
+
+<!-- New div for mobile view -->
+<div class="custom-div1"></div>
+
+<!--Script and template-->
+<script id="headerTemplate" type="text/x-jsrender">
+    <div class="header-template-wrap">
+        <div class="header-icon e-icons ${keyField}"></div>
+        <div class="header-text">${headerText}</div>
+    </div>
+</script>
+<!-- kanban card template -->
+<script id="cardTemplate" type="text/x-template">
+    <div class='card-template'>
+        <div class='e-card-header'>
+            <div class='e-card-header-caption'>
+                ${getResourceName(data)}
+            </div>
+        </div>
+        <div class='e-card-content e-tooltip-text'>
+            <div class='e-text'>${Subject}</div>
+        </div>
+        ${getBoolean(data)}
+        <div class='e-card-custom-footer'>
+            ${getTags(data.Tags)}
+            ${getKanbanResorurceImage(data)}
+        </div>
+    </div>
+</script>
+<script id="captiontemplate" type="text/x-template">
+    ${key}
+</script>
+<!-- Gantt column template  -->
+<script type="text/x-template" id="columnTemplate">
+    ${getGanttResourceImage(data)}
+</script>
+<!-- Grid column template  -->
+<script type="text/x-template" id="columnTemplateGrid">
+    ${getGridResourceImage(data)}
+</script>
