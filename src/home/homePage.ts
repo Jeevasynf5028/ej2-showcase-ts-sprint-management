@@ -58,6 +58,21 @@ let priorityDataSource = [
   { name: 'Normal', value: 'Normal' },
   { name: 'High', value: 'High' },
 ];
+window.home = () => {
+  renderDataSourceDropDown();
+  renderButton();
+  timerangecompo();
+  renderGrid();
+  renderKanban();
+  renderGantt();
+  renderScheduler();
+  updateCardValue();
+  bindClickEvent();
+  bindTabClickEvent();
+  bindEventListeners();
+  bindScrollEvent();
+  adjustElementHeight()
+};
 function updateSprintData(projectValue:any, instance:any, storeNewRecord:any) {
   switch (projectValue) {
     case 'Project1':
@@ -1763,21 +1778,6 @@ function bindScrollEvent(): void {
     });
   }
 }
-window.home = () => {
-  renderDataSourceDropDown();
-  renderButton();
-  timerangecompo();
-  renderGrid();
-  renderKanban();
-  renderGantt();
-  renderScheduler();
-  updateCardValue();
-  bindClickEvent();
-  bindTabClickEvent();
-  bindEventListeners();
-  bindScrollEvent();
-  adjustElementHeight()
-};
 function getResourceObject(resourceStr:any) {
   return editingResources.find(resource => resource.resourceName === resourceStr);
 }
