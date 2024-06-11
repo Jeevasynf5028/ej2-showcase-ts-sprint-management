@@ -1,0 +1,926 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    position: relative; /* Ensure relative positioning for absolute elements */
+}
+
+.create-container {
+    display: flex;
+    height: 100vh;
+    flex-direction: row; /* Set flex direction to row */
+}
+
+.nav-bar {
+    width: 80px;
+    background-color: rgb(13, 148, 136);
+    position: relative;
+    height: 100vh; /* Set height to 100% of viewport height */
+}
+
+.nav-bar > div {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.first-nav-div {
+    position: absolute;
+    top: 5px;
+    width: 48px;
+    height: 48px;
+    background-image: url('../images/Group\ 24.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.last-nav-div {
+    position: absolute;
+    bottom: 5px;
+    width: 48px;
+    height: 48px;
+    border-radius: 48px;
+    background-image: url('../images/Rectangle\ 2626.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.centered-div {
+    position: absolute;
+    top: 25%;
+    bottom: 25%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly !important;
+    align-items: center;
+}
+.parent-kanban {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center; /* Horizontal alignment */
+    align-items: center; /* Vertical alignment */
+}
+.navimage-kanban {
+    width: 22px;
+    height: 22px;
+    background-image: url('../images/Group\ 144.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.parent-scheduler {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center; /* Horizontal alignment */
+    align-items: center; /* Vertical alignment */
+}
+.navimage-scheduler {
+    width: 22px;
+    height: 22px;
+    background-image: url('../images/Group\ 142.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.parent-gantt {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center; /* Horizontal alignment */
+    align-items: center; /* Vertical alignment */
+}
+.navimage-gantt {
+    width: 22px;
+    height: 22px;
+    background-image: url('../images/Group\ 143.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.parent-grid {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center; /* Horizontal alignment */
+    align-items: center; /* Vertical alignment */
+}
+.navimage-grid {
+    width: 22px;
+    height: 22px;
+    background-image: url('../images/Group\ 123.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+}
+.main-content {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative; /* Ensure position is relative for child elements */
+}
+
+.title-container {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between; /* Align items in the title container */
+    align-items: center; /* Center items vertically */
+}
+
+.title {
+    font-size: 25px;
+    margin: 0; /* Remove the bottom margin */
+    margin-right: auto;
+    font-family: Inter;
+    font-weight: 600;
+}
+
+.button {
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 110px;
+    height: 30px;
+    background-color: #0d9488;
+    color: white;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-image: url("../images/Rectangle\ 2626.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:contain;
+}
+
+.extra-circle {
+    width: 36px;
+    height: 36px;
+    background-image: url("../images/Group\ 24.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+}
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.inner-cadr {
+    width: calc(23.7% - 10px);
+    border: 1.5px solid #f0f0f0;
+    padding: 30px 15px 30px 12px;
+    margin-right: 32px;
+    margin-bottom: 24px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+}
+.inner-cadr:nth-child(1) {
+    background-color: rgba(194, 220, 240, 1);
+}
+.inner-cadr:nth-child(2) {
+    background-color: rgba(201, 167, 244, 1);
+}
+.inner-cadr:nth-child(3) {
+    background-color: rgba(244, 218, 168, 1);
+}
+.inner-cadr:nth-child(4) {
+    background-color: rgba(182, 214, 171, 1);
+}
+.inner-cadr:last-child {
+    margin-right: 0;
+}
+.mainimagetodo,
+.mainimageprogress,
+.mainimagetest,
+.mainimagedone {
+    width: 33%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.mainimagetodo {
+    background-image: url('../images/to\ do\ bg.png');
+}
+.mainimageprogress {
+    background-image: url('../images/Inprogress\ bg.png');
+}
+.mainimagetest {
+    background-image: url('../images/testing\ bg.png');
+}
+.mainimagedone {
+    background-image: url('../images/done\ bg.png');
+}
+.detailcontainertodo {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+.texttodo {
+    width: 100%;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 15px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 28px;
+}
+.counttodo {
+    width: 100%;
+    font-family: Inter;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+.dropdown-container {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between; /* Align dropdowns to the left and right */
+    align-items: center; /* Center items vertically */
+}
+
+.custom-dropdown:nth-child(2) {
+    margin-left: auto; /* Push the second dropdown to the right */
+}
+
+.custom-dropdown {
+    width: calc(33% - 10px); /* Set width of dropdowns */
+    max-width: 200px; /* Set max-width for dropdowns */
+}
+#image-container {
+    position: relative; 
+    height: 30px;
+}
+
+#image-container img {
+    position: absolute; /* Set position absolute for precise positioning */
+}
+
+#image-container img:nth-child(1) {
+    left: 0; /* Position the first image at the left edge */
+}
+
+#image-container img:nth-child(2) {
+    left: 34px; /* Position the second image with some overlap from the first */
+}
+
+#image-container img:nth-child(3) {
+    left: 68px; /* Position the third image with some overlap from the second */
+}
+
+#image-container img:nth-child(4) {
+    left: 102px; /* Position the fourth image with some overlap from the third */
+}
+
+#image-container img:nth-child(5) {
+    left: 136px; /* Position the fifth image with some overlap from the fourth */
+}
+#timerangecompo {
+    width: calc(90% - 10px);
+    height: 30px;
+}
+.add-overflow {
+    overflow-y: auto;
+}
+#component-render-grid {
+    height: 78% !important;
+}
+#component-renderf,
+#component-render-scheduler,#component-render-gantt,#component-render-grid {
+  display: none;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#component-renderf.show1,
+#component-render-scheduler.show1, #component-render-gantt.show1, #component-render-grid.show1{
+  display: block;
+  opacity: 1;
+}
+.show1-background {
+    background-color: rgba(15, 118, 110, 1);
+    border-radius:8px
+}
+#component-render-gantt {
+    width: 90vw !important;
+    //height: 45vh !important;
+}
+
+.parent-kanban:hover, .parent-scheduler:hover, .parent-gantt:hover, .parent-grid:hover{
+    border: 1px solid white;
+    border-radius: 8px;
+}
+.circular-image:hover {
+    box-shadow: 0 0 10px rgba(13, 148, 136, 1);
+}
+.circular-image {
+    border-radius: 50%;
+}
+.selected-image {
+    border: 2px solid rgba(13, 148, 136, 1)
+}
+#component-render-grid .e-gridcontent {
+   border-bottom: 0.1px solid lightgrey;
+}
+/* Media query for mobile view */
+@media only screen and (max-width: 700px) {
+    .nav-bar {
+        display: none; /* Hide the normal nav bar */
+    }
+    #component-renderf {
+        width: 90vw !important;
+     }
+     #component-render-gantt {
+        width: 90vw !important;
+     }
+     #component-render-grid {
+        width: 90vw !important;
+     }
+    .mobile-nav-bar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50px; /* Set height as needed */
+        background-color: rgb(13, 148, 136);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    .create-container {
+        position: relative;
+    }
+
+    .button {
+        display: none; /* Hide the button in mobile view */
+    }
+
+    .circle {
+        display: block; /* Show the circle in mobile view */
+    }
+
+    .extra-circle {
+        display: block; /* Show the extra circle in mobile view */
+    }
+
+    .dropdown-container {
+        flex-direction: column; /* Align dropdowns vertically in mobile view */
+        justify-content: flex-start; /* Align dropdowns to the start in mobile view */
+    }
+    .e-input-group[aria-describedby="datasourceDropDown"] {
+       width: 100% !important;
+       margin-bottom: 5px;
+    }
+    #timerangecompo {
+        width: 100% !important;
+    }
+    .e-input-group.e-date-range-wrapper {
+        width: 100% !important;
+    }
+    .custom-dropdown {
+        width: 100%; /* Set width to 100% in mobile view */
+        max-width: none; /* Remove max-width in mobile view */
+        margin-right: 0;
+        margin-bottom: 10px; /* Add space between dropdowns */
+    }
+
+    /* New div for mobile view */
+    .custom-div1 {
+        position: fixed;
+        bottom: 50px; /* Adjust distance from bottom */
+        right: 20px; /* Adjust distance from right */
+        z-index: 1000;
+    }
+    .custom-div1:before {
+        content: url("../images/Group\ 1893.png");
+    }
+    .title-container {
+        position:sticky;
+        top: 5px;
+        z-index: 1;
+    }
+    .component-container1 {
+        max-height: 90vh;
+        overflow-y: auto;
+        padding-bottom: 50px;
+    }
+    #component-render-scheduler .e-content-wrap tbody {
+       height: 90vh;
+    }
+    #component-render-grid .e-gridcontent {
+        width: 300% !important;
+    }
+    #component-render-grid #component-render-grid_toolbarItems {
+        width: 300% !important;
+    }
+    #component-render-grid .e-gridheader {
+        width: 300% !important;
+    }
+    .parent-kanban:hover, 
+    .parent-scheduler:hover, 
+    .parent-gantt:hover, 
+    .parent-grid:hover {
+        border: none; /* Remove the border */
+    }
+    .circular-image:hover {
+        box-shadow: none; /* Remove the box shadow */
+    }
+    
+}
+
+@media only screen and (min-width: 700px) {
+    .mobile-nav-bar {
+        display: none; /* Hide the mobile nav bar in normal view */
+    }
+
+    .circle {
+        display: none; /* Hide the circle in normal view */
+    }
+
+    .extra-circle {
+        display: none; /* Hide the extra circle in normal view */
+    }
+}
+@media (min-width: 1400px) {
+    .inner-cadr {
+        width: calc(23.9% - 10px);
+    }
+    .mainimagetodo,
+    .mainimageprogress,
+    .mainimagetest,
+    .mainimagedone {
+      width: 60px;
+    }
+    .detailcontainertodo{
+        padding-left: 16px;
+    }
+}
+@media (min-width: 701px) and (max-width: 1170px) {
+    .inner-cadr {
+        width: calc(22.5% - 10px);
+        padding: 20px 15px 20px 12px;
+    }
+}
+@media (max-width: 700px) {
+    .inner-cadr {
+        flex-direction: column;
+        padding: 0;
+        padding-bottom: 0;
+        margin-right: 10px;
+        width: calc(25% - 10px);
+    }
+    .mainimagetodo,
+    .mainimageprogress,
+    .mainimagetest,
+    .mainimagedone {
+        width: 100%;
+        height:34%;
+    }
+    .detailcontainertodo {
+        height: 66%;
+        width: 100%;
+        padding-bottom: 30px;
+    }
+    .counttodo {
+        height: 33%;
+        font-size: 20px; /* Reduce font size for smaller screens */
+        text-align: center;
+    }
+    .texttodo {
+        height: 33%;
+        font-size: 14px; /* Reduce font size for smaller screens */
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    .change-font {
+        font-size: 13px;
+        padding-right:1px;
+        white-space: nowrap;
+    }
+}
+@media only screen and (min-width: 1500px) {
+    #component-render-gantt {
+        width: 92vw !important;
+    }
+    // #component-render-grid {
+    //     height: 80% !important;
+    // }
+}
+
+@media only screen and (min-width: 1900px) {
+    #component-render-gantt {
+        width: 94vw !important;
+    }
+    // #component-render-grid {
+    //     height: 80% !important;
+    // }
+}
+@media (min-width: 1130px) and (max-width: 1170px) {
+    .add-overflow {
+        overflow-y: auto;
+        height :57vh;
+        max-height: 57vh; /* Set max-height to 70% of viewport height */
+    }
+    #component-render-grid {
+        height: 70% !important;
+    }
+}
+
+@media (min-width: 850px) and (max-width: 1130px) {
+    .add-overflow {
+        overflow-y: auto;
+        height :54vh;
+        max-height: 54vh; /* Set max-height to 70% of viewport height */
+    }
+    // #component-render-grid {
+    //     height: 70% !important;
+    // }
+}
+@media (min-width: 800px) and (max-width: 855px) {
+    .inner-cadr {
+        padding: 10px 5px 10px 2px;
+    }
+    .mainimagetodo,
+    .mainimageprogress,
+    .mainimagetest,
+    .mainimagedone {
+        width: 30%;
+    }
+    .texttodo {
+        font-size: 15px;
+        margin-bottom: 15px;
+    }
+    .counttodo {
+        font-size: 30px;
+    }
+    .main-content{
+        padding-top: 5px;
+    }
+    .nav-bar {
+        width: 65px;
+    }
+    .first-nav-div {
+        width: 35px;
+        height: 35px;
+    }
+    .last-nav-div {
+        width: 35px;
+        height: 35px;
+    }
+    .title-container {
+        margin-bottom: 5px;
+    }
+    .add-overflow {
+        overflow-y: auto;
+        height :54vh;
+        max-height: 54vh; /* Set max-height to 70% of viewport height */
+    }
+    // #component-render-grid {
+    //     height: 63% !important;
+    // }
+    .navimage-kanban,.navimage-scheduler,.navimage-gantt,.navimage-grid {
+        width: 16px;
+        height: 16px;
+    }
+    .parent-kanban,.parent-scheduler,.parent-gantt,.parent-grid {
+        width: 35px;
+        height: 35px;
+    }
+    .circular-image {
+        width: 30px !important;
+        height: 30px !important;
+    }
+    #timerangecompo {      
+        height: 15px;
+    }
+    #image-container img:nth-child(1) {
+        left: 0; /* Position the first image at the left edge */
+    }
+    
+    #image-container img:nth-child(2) {
+        left: 25px; /* Position the second image with some overlap from the first */
+    }
+    
+    #image-container img:nth-child(3) {
+        left: 50px; /* Position the third image with some overlap from the second */
+    }
+    
+    #image-container img:nth-child(4) {
+        left: 75px; /* Position the fourth image with some overlap from the third */
+    }
+    
+    #image-container img:nth-child(5) {
+        left: 100px; /* Position the fifth image with some overlap from the fourth */
+    }
+    #timerangecompo input:first-of-type {
+        height: 20px;
+        
+    }
+    .e-input-group[aria-describedby="datasourceDropDown"] {
+        height: 20px;
+    }
+    .e-input-group[aria-describedby="datasourceDropDown"] input:first-of-type {
+        height: 20px;
+    }
+}
+@media (min-width: 700px) and (max-width: 800px) {
+    .inner-cadr {
+        padding: 10px 5px 10px 2px;
+    }
+    .mainimagetodo,
+    .mainimageprogress,
+    .mainimagetest,
+    .mainimagedone {
+        width: 25%;
+    }
+    .dropdown-container {
+        align-items: start;
+    }
+    .texttodo {
+        font-size: 10px;
+        margin-bottom: 10px;
+    }
+    .counttodo {
+        font-size: 25px;
+    }
+    .main-content{
+        padding-top: 0px;
+    }
+    .nav-bar {
+        width: 50px;
+    }
+    .first-nav-div {
+        width: 30px;
+        height: 30px;
+    }
+    .last-nav-div {
+        width: 30px;
+        height: 30px;
+    }
+    .title-container {
+        margin-bottom: 0px;
+    }
+    .title {
+        font-size: 20px;
+    }
+    .button {
+        height: 20px;
+        background-repeat: no-repeat;
+        background-position: center; 
+        background-size: cover;
+    }
+    .add-overflow {
+        overflow-y: auto;
+        height :60vh;
+        max-height: 60vh; /* Set max-height to 70% of viewport height */
+    }
+    #component-render-grid {
+        height: 61% !important;
+    }
+    .navimage-kanban,
+    .navimage-scheduler,
+    .navimage-gantt,
+    .navimage-grid {
+        width: 11px;
+        height: 11px;
+    }
+    .parent-kanban,
+    .parent-scheduler,
+    .parent-gantt,
+    .parent-grid {
+        width: 30px;
+        height: 30px;
+    }
+    .circular-image {
+        width: 25px !important;
+        height: 25px !important;
+    }
+    #timerangecompo {      
+        height: 15px;
+    }
+    #image-container img:nth-child(1) {
+        left: 0; /* Position the first image at the left edge */
+    }
+    
+    #image-container img:nth-child(2) {
+        left: 25px; /* Position the second image with some overlap from the first */
+    }
+    
+    #image-container img:nth-child(3) {
+        left: 50px; /* Position the third image with some overlap from the second */
+    }
+    
+    #image-container img:nth-child(4) {
+        left: 75px; /* Position the fourth image with some overlap from the third */
+    }
+    
+    #image-container img:nth-child(5) {
+        left: 100px; /* Position the fifth image with some overlap from the fourth */
+    }
+    #timerangecompo input:first-of-type {
+        height: 20px;
+        
+    }
+    .e-input-group[aria-describedby="datasourceDropDown"] {
+        height: 20px;
+    }
+    .e-input-group[aria-describedby="datasourceDropDown"] input:first-of-type {
+        height: 20px;
+    }
+}
+
+/* Css From other Project */
+
+/* Kanban */
+.e-swimlane-row-collapse:focus,
+  .e-swimlane-row-expand:focus,
+  .e-swimlane-row-collapse:hover,
+  .e-swimlane-row-expand:hover {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .e-swimlane-row-expand:hover,
+  .e-swimlane-row-collapse:hover {
+      box-shadow: 0 0 0 4px rgba(130, 138, 145, 0.3) !important;
+  }  
+.e-kanban .header-template-wrap {
+    display: inline-flex;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.e-kanban .header-template-wrap .header-icon {
+    font-family: 'Kanban priority icons';
+    margin-top: 3px;
+    width: 10%;
+}
+
+.e-kanban .header-template-wrap .header-text {
+    margin-left: 15px;
+    font-family: 'Inter' !important;
+}
+
+.e-kanban.e-rtl .header-template-wrap .header-text {
+    margin-right: 15px;
+}
+
+.e-kanban.e-rtl .e-card-avatar {
+    left: 12px;
+    right: auto;
+}
+
+.e-kanban .e-card-avatar {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    background:  gainsboro;
+    color: #6b6b6b;
+    border-radius: 50%;
+    position: absolute;
+    right: 12px;
+    bottom: 10px;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 10px 0px 0px 1px;
+}
+
+.e-kanban .Open::before {
+    content: '\e700';
+    color: #0251cc;
+    font-size: 16px;
+}
+
+.e-kanban .InProgress::before {
+    content: '\e703';
+    color: #ea9713;
+    font-size: 16px;
+}
+
+.e-kanban .e-image img {
+    background: #ececec;
+    border: 1px solid #c8c8c8;
+    border-radius: 50%;
+}
+
+.e-kanban .Testing::before {
+    content: '\e701';
+    color: #8e4399;
+    font-size: 16px;
+}
+
+.e-kanban .Done::before {
+    content: '\e702';
+    color: #63ba3c;
+    font-size: 16px;
+}
+
+.e-kanban .e-card .e-card-tag-field {
+    background: #ececec;
+    color: #6b6b6b;
+    margin-right: 5px;
+    line-height: 1.1;
+    font-size: 13px;
+    border-radius: 3px;
+    padding: 4px;
+}
+
+.e-kanban .e-card-custom-footer {
+    display: flex;
+    padding: 0px 12px 12px;
+    line-height: 1;
+    height: 35px;
+}
+
+.e-kanban .e-kanban-content .e-content-row .e-content-cells .e-card-wrapper .e-card.Low.e-selection:hover,
+.e-kanban .e-kanban-content .e-content-row .e-content-cells .e-card-wrapper .e-card.Low,
+.e-kanban.e-rtl .e-kanban-content .e-content-row .e-content-cells .e-card-wrapper .e-card.Low {
+    border-left: 3px solid #1F88E5;
+}
+
+.e-kanban .e-kanban-content .e-content-row .e-content-cells .e-card-wrapper .e-card.High.e-selection:hover,
+.e-kanban .e-kanban-content .e-content-row .e-content-cells .e-card-wrapper .e-card.High,
+.e-kanban.e-rtl .e-kanban-content .e-content-row .e-content-cells .e-card-wrapper .e-card.High {
+    border-left: 3px solid #673AB8;
+}
+
+.e-kanban .e-kanban-content .e-content-row .e-content-cells .e-card-wrapper .e-card.Normal.e-selection:hover,
+.e-kanban .e-kanban-content .e-content-row .e-content-cells .e-card-wrapper .e-card.Normal,
+.e-kanban.e-rtl .e-kanban-content .e-content-row .e-content-cells .e-card-wrapper .e-card.Normal {
+    border-left: 3px solid #02897B;
+}
+
+.e-kanban .e-kanban-content .e-content-row .e-content-cells .e-card-wrapper .e-card.Critical.e-selection:hover,
+.e-kanban .e-kanban-content .e-content-row .e-content-cells .e-card-wrapper .e-card.Critical,
+.e-kanban.e-rtl .e-kanban-content .e-content-row .e-content-cells .e-card-wrapper .e-card.Critical {
+    border-left: 3px solid #E64A19;
+}
+
+.e-kanban.e-rtl .e-kanban-content .e-content-row .e-content-cells .e-card-wrapper .e-card {
+    border-left: none;
+}
+.fluent-dark .e-kanban .e-card .e-card-tag-field,
+.bootstrap5-dark .e-kanban .e-card .e-card-tag-field,
+.tailwind-dark .e-kanban .e-card .e-card-tag-field,
+.material-dark .e-kanban .e-card .e-card-tag-field,
+.fabric-dark .e-kanban .e-card .e-card-tag-field,
+.bootstrap-dark .e-kanban .e-card .e-card-tag-field,
+.highcontrast .e-kanban .e-card .e-card-tag-field {
+    background: #4b5563;
+    color: #fff;
+}
+.fluent-dark .e-kanban .e-card-avatar,
+.bootstrap5-dark .e-kanban .e-card-avatar,
+.tailwind-dark .e-kanban .e-card-avatar,
+.material-dark .e-kanban .e-card-avatar,
+.fabric-dark .e-kanban .e-card-avatar,
+.bootstrap-dark .e-kanban .e-card-avatar,
+.highcontrast .e-kanban .e-card-avatar {
+    background: #4b5563;
+    color: #fff;
+}
+
+@font-face {
+    font-family: 'Kanban priority icons';
+    src:
+        url(data:application/x-font-ttf;charset=utf-8;base64,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) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="sf-icon-"],
+[class*=" sf-icon-"] {
+    font-family: 'Kanban priority icons' !important;
+    speak: none;
+    font-size: 55px;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+////// Scheduler ////
+.e-location-container,
+.e-all-day-time-zone-row,
+.e-recurrenceeditor,
+.e-description-row {
+    display: none !important;
+}
